@@ -33,6 +33,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="YamlDotNet.Core">
+      <HintPath>..\..\libs\yamldotnet\YamlDotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet.RepresentationModel">
+      <HintPath>..\..\libs\yamldotnet\YamlDotNet.RepresentationModel.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -40,6 +46,16 @@
     <Compile Include="Tool.cs" />
     <Compile Include="IConsole.cs" />
     <Compile Include="DefaultConsole.cs" />
+    <Compile Include="Tools\ITool.cs" />
+    <Compile Include="Tools\XBuildTool.cs" />
+    <Compile Include="IConfigurationProvider.cs" />
+    <Compile Include="ConfigurationProviderExtensions.cs" />
+    <Compile Include="YamlConfigurationProvider.cs" />
+    <Compile Include="Tools\ToolUnsuccessfulException.cs" />
+    <Compile Include="ProcessHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Tools\" />
+  </ItemGroup>
 </Project>

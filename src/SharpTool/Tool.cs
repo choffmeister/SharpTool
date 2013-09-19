@@ -1,5 +1,6 @@
-using System;
+using System.IO;
 using System.Reflection;
+using SharpTool.Tools;
 
 namespace SharpTool
 {
@@ -34,6 +35,12 @@ namespace SharpTool
             this.console.WriteLine("SharpTool v{0}", assembly.GetName().Version);
             this.console.WriteLine("SharpTool directory: {0}", this.sharpToolDirectory);
             this.console.WriteLine("Project directory: {0}", this.projectDirectory);
+
+            string sharpToolFilePath = Path.Combine(this.projectDirectory, "sharptool.yml");
+            IConfigurationProvider config = new YamlConfigurationProvider(sharpToolFilePath);
+
+            ITool tool = new XBuildTool();
+            tool.Execute(this.console, config, this.projectDirectory);
         }
     }
 }

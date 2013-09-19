@@ -1,3 +1,7 @@
+base:
+  name: SharpTool
+  solution: src/SharpTool.sln
+
 lifecycle:
   build:
   test:

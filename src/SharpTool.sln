@@ -3,12 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTool", "SharpTool\SharpTool.csproj", "{9CFAD141-1E2F-46A8-85F1-DAA25F39A254}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTool.Tests", "SharpTool.Tests\SharpTool.Tests.csproj", "{0FAA7BBC-C9ED-44E2-8A9D-B5CFB0FE12E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FAA7BBC-C9ED-44E2-8A9D-B5CFB0FE12E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0FAA7BBC-C9ED-44E2-8A9D-B5CFB0FE12E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{0FAA7BBC-C9ED-44E2-8A9D-B5CFB0FE12E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{0FAA7BBC-C9ED-44E2-8A9D-B5CFB0FE12E1}.Release|x86.Build.0 = Release|Any CPU
 		{9CFAD141-1E2F-46A8-85F1-DAA25F39A254}.Debug|x86.ActiveCfg = Debug|x86
 		{9CFAD141-1E2F-46A8-85F1-DAA25F39A254}.Debug|x86.Build.0 = Debug|x86
 		{9CFAD141-1E2F-46A8-85F1-DAA25F39A254}.Release|x86.ActiveCfg = Release|x86

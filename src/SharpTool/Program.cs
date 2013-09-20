@@ -21,11 +21,11 @@ namespace SharpTool
             string sharpToolDirectory = GetSharpToolDirectory();
             string projectDirectory = GetProjectRootDirectory(Environment.CurrentDirectory);
 
-            // create tool
-            Tool tool = new Tool(console, sharpToolDirectory, projectDirectory);
+            // create tool chain
+            ToolChain toolChain = new ToolChain(console, sharpToolDirectory, projectDirectory);
 
             // execute tool and exit
-            ExecuteAndReturnExitCode(console, tool.Execute);
+            ExecuteAndReturnExitCode(console, toolChain.Execute);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace SharpTool
             }
             catch (Exception ex)
             {
-                console.WriteErrorLine("Error: {0}", ex);
+                console.WriteErrorLine("Error: {0}", ex.Message);
 
                 Environment.Exit(1);
             }

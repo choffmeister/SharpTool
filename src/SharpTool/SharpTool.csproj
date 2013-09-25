@@ -41,6 +41,10 @@
       <HintPath>Libraries\YamlDotNet\YamlDotNet.RepresentationModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DotArguments">
+      <HintPath>Libraries\DotArguments\DotArguments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -75,6 +79,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Libraries\YamlDotNet\INFO">
       <LogicalName>Libraries/YamlDotNet/INFO</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libraries\DotArguments\DotArguments.dll">
+      <LogicalName>Libraries/DotArguments/DotArguments.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libraries\DotArguments\INFO">
+      <LogicalName>Libraries/DotArguments/INFO</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libraries\DotArguments\LICENSE">
+      <LogicalName>Libraries/DotArguments/LICENSE</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -14,6 +14,9 @@ namespace SharpTool
         /// <param name="args">The command-line arguments.</param>
         public static void Main(string[] args)
         {
+            // load embedded libraries
+            LibraryManager.LoadLibraries();
+
             // create console
             IConsole console = new DefaultConsole();
 

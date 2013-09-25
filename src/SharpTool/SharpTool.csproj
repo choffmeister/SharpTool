@@ -34,10 +34,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="YamlDotNet.Core">
-      <HintPath>..\..\libs\yamldotnet\YamlDotNet.Core.dll</HintPath>
+      <HintPath>Libraries\YamlDotNet\YamlDotNet.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="YamlDotNet.RepresentationModel">
-      <HintPath>..\..\libs\yamldotnet\YamlDotNet.RepresentationModel.dll</HintPath>
+      <HintPath>Libraries\YamlDotNet\YamlDotNet.RepresentationModel.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +56,25 @@
     <Compile Include="EnvironmentInformation.cs" />
     <Compile Include="Tools\BuildTool.cs" />
     <Compile Include="ToolChain.cs" />
+    <Compile Include="LibraryManager.cs" />
+    <Compile Include="LibraryInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Libraries\YamlDotNet\YamlDotNet.Core.dll">
+      <LogicalName>Libraries/YamlDotNet/YamlDotNet.Core.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libraries\YamlDotNet\YamlDotNet.RepresentationModel.dll">
+      <LogicalName>Libraries/YamlDotNet/YamlDotNet.RepresentationModel.dll</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libraries\YamlDotNet\LICENSE">
+      <LogicalName>Libraries/YamlDotNet/LICENSE</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libraries\YamlDotNet\INFO">
+      <LogicalName>Libraries/YamlDotNet/INFO</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

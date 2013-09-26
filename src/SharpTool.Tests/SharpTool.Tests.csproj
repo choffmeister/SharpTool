@@ -36,7 +36,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="ProgramTest.cs" />
+    <Compile Include="DirectoryHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharpTool\SharpTool.csproj">

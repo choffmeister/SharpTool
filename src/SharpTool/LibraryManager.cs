@@ -7,7 +7,7 @@ namespace SharpTool
     /// <summary>
     /// Manages embedded third-party libraries.
     /// </summary>
-    public class LibraryManager
+    public static class LibraryManager
     {
         private static readonly Assembly EntryAssembly = Assembly.GetEntryAssembly();
         private static LibraryInfo[] libraries;
@@ -19,6 +19,21 @@ namespace SharpTool
         public static LibraryInfo[] Libraries
         {
             get { return libraries; }
+        }
+
+        /// <summary>
+        /// The entry point of the program, where the program control starts and ends.
+        /// This methods loads all embedded libraries and then runs <see cref="Program.Run"/>.
+        /// </summary>
+        /// <param name="args">The command-line arguments.</param>
+        public static void Main(string[] args)
+        {
+            // load embedded libraries
+            LibraryManager.LoadLibraries();
+
+            // start program itself
+            Program program = new Program();
+            program.Run(args);
         }
 
         /// <summary>

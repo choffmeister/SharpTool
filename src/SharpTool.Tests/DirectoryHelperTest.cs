@@ -5,10 +5,10 @@ using NUnit.Framework;
 namespace SharpTool.Tests
 {
     /// <summary>
-    /// Tests for the <see cref="Program"/> class.
+    /// Tests for the <see cref="DirectoryHelper"/> class.
     /// </summary>
     [TestFixture]
-    public class ProgramTest
+    public class DirectoryHelperTest
     {
         private string tempFolder;
 
@@ -51,7 +51,7 @@ namespace SharpTool.Tests
 
             File.WriteAllText(Path.Combine(sub2, "sharptool.yml"), "config");
 
-            Assert.AreEqual(sub2, Program.GetProjectRootDirectory(sub3));
+            Assert.AreEqual(sub2, DirectoryHelper.GetProjectRootDirectory(sub3));
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace SharpTool.Tests
             Directory.CreateDirectory(sub2);
             Directory.CreateDirectory(sub3);
 
-            Program.GetProjectRootDirectory(sub3);
+            DirectoryHelper.GetProjectRootDirectory(sub3);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace SharpTool.Tests
         [Test]
         public void GetHomeDirectory()
         {
-            string homeDirectory = Program.GetHomeDirectory();
+            string homeDirectory = DirectoryHelper.GetHomeDirectory();
 
             Assert.IsNotNull(homeDirectory);
             Assert.IsNotEmpty(homeDirectory);

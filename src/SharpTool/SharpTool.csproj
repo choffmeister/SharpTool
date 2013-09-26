@@ -20,6 +20,7 @@
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
+    <Commandlineparameters>version</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>
@@ -59,13 +60,18 @@
     <Compile Include="Tools\ToolBase.cs" />
     <Compile Include="EnvironmentInformation.cs" />
     <Compile Include="Tools\BuildTool.cs" />
-    <Compile Include="ToolChain.cs" />
     <Compile Include="LibraryManager.cs" />
     <Compile Include="LibraryInfo.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\BuildCommand.cs" />
+    <Compile Include="DirectoryHelper.cs" />
+    <Compile Include="Commands\VersionCommand.cs" />
+    <Compile Include="SharpToolCommandManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Tools\" />
+    <Folder Include="Commands\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Libraries\YamlDotNet\YamlDotNet.Core.dll">
